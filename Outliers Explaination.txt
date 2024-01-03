@@ -1,0 +1,49 @@
+A quantile is a statistical term that represents a data point or a set of data points that divide a dataset into specific intervals or portions. Quantiles are used to understand the distribution of a dataset by providing information about the relative standing of individual values within that dataset.
+
+
+The p-th quantile, denoted as Q(p), is the value below which p percent of the data falls. The most commonly used quantiles are the median (Q(0.5)), quartiles (Q(0.25), Q(0.5), and Q(0.75)), and percentiles (Q(0.01), 
+
+
+The formula to calculate the p-th quantile of a dataset is as follows:
+
+Q(p)=value at (p×(number of data points+1)/100)th position in the sorted dataset
+
+Consider the dataset: 3,6,7,8,8,10,13,15,16,20
+
+Step1:Arrange the data in ascending order  -->3,6,7,8,8,10,13,15,16,20
+
+Step2: Calculate Quartiles and IQR:
+
+Quartiles:Q1(25th percentile):  
+
+
+value at (25*11)/100 ---> value at 2.75-th position
+
+Q 3(75th percentile): 
+
+value at (75*11)/100 ---> value at 8.25-th position
+​
+Q1 = 6.5  (average of 2nd and 3rd values -->13/2)
+
+Q3 = 15.75 (average of 8th and 9th values -->31/2)
+
+IQR = Q3 - Q1 = 15.75 - 6.5 = 9.25
+
+
+Step 3: Define Lower and Upper Bounds:
+
+Lower Bound = Q1 - 1.5*IQR = 6.5 - 1.5*9.25 = -7.625
+
+Upper Bound = Q3 + 1.5*IQR = 15.75 + 1.5*9.25 = 28.875
+
+Step 4: Identify Outliers:
+
+Any data point below the lower bound or above the upper bound is considered an outlier.
+
+
+Step 5: Identify and Remove Outliers:
+
+Based on the bounds, there are no outliers in this dataset.
+In summary, the dataset does not contain any outliers based on the interquartile range (IQR) method with a threshold of 1.5. All values in the dataset fall within the calculated bounds.
+
+A higher threshold might be appropriate in situations where you want to be more conservative in identifying outliers.
